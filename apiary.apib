@@ -1,80 +1,14 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://private-d1080-burnhamsprice.apiary-mock.com
 
 # burnhamsprice
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+Price service to get product prices
 
-## Questions Collection [/questions]
+## Champange [/v3/price/TPNC/250373296/]
 
-### List All Questions [GET]
+### GET [GET]
 
 + Response 200 (application/json)
 
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
-            }
-        ]
-
-### Create a New Question [POST]
-
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
-
-        {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
-            }
+        {"tpnb":"052182793","pricingDate":"2015-12-29","pricingLocation":{"locType":"national","locRef":"UK"},"variants":[{"tpnc":"250373296","currency":"GBP","sellingUOM":"EA","regPrice":"25.00","promoPrice":"15.00","clrPrice":null,"authPrice":"15.00","clearances":[]}],"promotions":[{"offerId":"A31881146","offerName":"N1  NCLAS FUILTTE BRT CHMP 75CL ONLY £15","effectiveDate":"2015-12-14","endDate":"2016-01-02","customerFriendlyDescription1":" Only £15.00","customerFriendlyDescription2":"NICOLAS FEUILLATTE BRUT CHAMPAGNE 75CL"}]}
